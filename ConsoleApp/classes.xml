@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Library Name="MyClassLibrary">
+  <Type Name="Animal" Namespace="MyClassLibrary" Kind="Class">
+    <Attributes>
+      <Attribute Type="NullableContextAttribute" />
+      <Attribute Type="NullableAttribute" />
+      <Attribute Type="CommentAttribute">
+        <Comment>базовый абстрактный класс Animal</Comment>
+      </Attribute>
+    </Attributes>
+    <Properties>
+      <Property Name="Country" Type="String" />
+      <Property Name="Name" Type="String" />
+      <Property Name="HideFromOtherAnimals" Type="Boolean" />
+      <Property Name="Classification" Type="eClassificationAnimal" />
+    </Properties>
+    <Methods>
+      <Method Name="Deconstruct" ReturnType="Void">
+        <Parameters>
+          <Parameter Name="name" Type="String&amp;" />
+          <Parameter Name="country" Type="String&amp;" />
+        </Parameters>
+      </Method>
+      <Method Name="GetClassificationAnimal" ReturnType="eClassificationAnimal" />
+      <Method Name="GetFavouriteFood" ReturnType="eFavoriteFood" />
+      <Method Name="SayHello" ReturnType="Void" />
+    </Methods>
+  </Type>
+  <Type Name="CommentAttribute" Namespace="MyClassLibrary" Kind="Class">
+    <BaseType>Attribute</BaseType>
+    <Attributes>
+      <Attribute Type="NullableContextAttribute" />
+      <Attribute Type="NullableAttribute" />
+      <Attribute Type="AttributeUsageAttribute" />
+    </Attributes>
+    <Properties>
+      <Property Name="Comment" Type="String" />
+    </Properties>
+  </Type>
+  <Type Name="Cow" Namespace="MyClassLibrary" Kind="Class">
+    <BaseType>Animal</BaseType>
+    <Attributes>
+      <Attribute Type="CommentAttribute">
+        <Comment>класс Cow — даёт молоко</Comment>
+      </Attribute>
+    </Attributes>
+    <Methods>
+      <Method Name="GetFavouriteFood" ReturnType="eFavoriteFood" />
+      <Method Name="SayHello" ReturnType="Void" />
+    </Methods>
+  </Type>
+  <Type Name="eClassificationAnimal" Namespace="MyClassLibrary" Kind="Enum">
+    <BaseType>Enum</BaseType>
+  </Type>
+  <Type Name="eFavoriteFood" Namespace="MyClassLibrary" Kind="Enum">
+    <BaseType>Enum</BaseType>
+  </Type>
+  <Type Name="Lion" Namespace="MyClassLibrary" Kind="Class">
+    <BaseType>Animal</BaseType>
+    <Attributes>
+      <Attribute Type="CommentAttribute">
+        <Comment>класс Lion - царь зверей</Comment>
+      </Attribute>
+    </Attributes>
+    <Methods>
+      <Method Name="GetFavouriteFood" ReturnType="eFavoriteFood" />
+      <Method Name="SayHello" ReturnType="Void" />
+    </Methods>
+  </Type>
+  <Type Name="Pig" Namespace="MyClassLibrary" Kind="Class">
+    <BaseType>Animal</BaseType>
+    <Attributes>
+      <Attribute Type="CommentAttribute">
+        <Comment>класс Pig — всёядная</Comment>
+      </Attribute>
+    </Attributes>
+    <Methods>
+      <Method Name="GetFavouriteFood" ReturnType="eFavoriteFood" />
+      <Method Name="SayHello" ReturnType="Void" />
+    </Methods>
+  </Type>
+</Library>
